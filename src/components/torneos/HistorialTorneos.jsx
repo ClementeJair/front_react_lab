@@ -93,7 +93,7 @@ function HistorialTorneos() {
     try {
       const token = localStorage.getItem('token');
       const response = await fetch(
-        `http://localhost:8080/api/reportes/torneos/${torneoId}/ranking/pdf`,
+        `https://jorgeruiz20.onrender.com/api/reportes/torneos/${torneoId}/ranking/pdf`,
         {
           headers: {
             'Authorization': `Bearer ${token}`
@@ -122,7 +122,7 @@ function HistorialTorneos() {
 
   const descargarPDFCompleto = (torneoId) => {
     const token = localStorage.getItem('token');
-    const url = `http://localhost:8080/api/reportes/torneos/${torneoId}/pdf`;
+    const url = `https://jorgeruiz20.onrender.com/api/reportes/torneos/${torneoId}/pdf`;
     
     const a = document.createElement('a');
     a.href = url;

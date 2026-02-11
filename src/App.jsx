@@ -59,7 +59,7 @@ function AppRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/front_react_lab">  {/* ⬅️ AGREGAR ESTA LÍNEA */}
       <AuthProvider>
         <AppRoutes />
         <ToastContainer

@@ -71,7 +71,7 @@ function RankingTorneo({ torneoId, torneoNombre, onClose }) {
     try {
       const token = localStorage.getItem('token');
       const response = await fetch(
-        `http://localhost:8080/api/reportes/torneos/${torneoId}/ranking/pdf`,
+        `https://jorgeruiz20.onrender.com/api/reportes/torneos/${torneoId}/ranking/pdf`,
         {
           headers: {
             'Authorization': `Bearer ${token}`
