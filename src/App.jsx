@@ -1,5 +1,6 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// 1. Cambiamos BrowserRouter por HashRouter
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { useAuth } from './hooks/useAuth';
 import { ToastContainer } from 'react-toastify';
@@ -19,7 +20,6 @@ import RecuperarPassword from './pages/RecuperarPassword';
 import Navbar from './components/common/Navbar';
 import PrivateRoute from './components/common/PrivateRoute';
 
-// CSS - ¡IMPORTANTE! Importa el archivo CSS
 import './App.css';
 
 function AppRoutes() {
@@ -59,7 +59,8 @@ function AppRoutes() {
 
 function App() {
   return (
-    <BrowserRouter basename="/front_react_lab">  {/* ⬅️ AGREGAR ESTA LÍNEA */}
+    /* Usamos Router (que ahora es HashRouter) y quitamos el basename */
+    <Router>
       <AuthProvider>
         <AppRoutes />
         <ToastContainer
@@ -75,7 +76,7 @@ function App() {
           theme="dark"
         />
       </AuthProvider>
-    </BrowserRouter>
+    </Router>
   );
 }
 
