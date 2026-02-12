@@ -5,7 +5,7 @@ import { useAuth } from './hooks/useAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HistorialTorneos from './components/torneos/HistorialTorneos';
-import BracketPublico from './components/torneos/#/BracketPublico';
+import BracketPublico from './components/torneos/BracketPublico';
 
 // Pages
 import Login from './pages/Login';
