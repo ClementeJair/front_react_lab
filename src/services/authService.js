@@ -1,5 +1,5 @@
 // src/services/authService.js
-import api from 'https://jorgeruiz20.onrender.com';
+import api from '/api';
 
 export const authService = {
   login: async (email, password) => {
